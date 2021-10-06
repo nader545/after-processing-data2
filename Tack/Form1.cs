@@ -12,6 +12,7 @@ namespace Tack
         {
             InitializeComponent();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string inputFilePath = "E:\\28-09-2021.pu";
@@ -43,7 +44,7 @@ namespace Tack
                     string file;
                     int cout = 0;
                     while ((file = sr.ReadLine()) != null)
-                    {                        
+                    {
                         string[] arr = file.Split(new char[] { ',' });
                         dr = dt.NewRow();
                         for (int i = 1; i <= count; i++)
@@ -82,7 +83,7 @@ namespace Tack
                             {
                                 writer.WriteLine("[");
                                 writer.WriteLine(" age:" + dt.Rows[i][0].ToString() + "\n" + "country:" + dt.Rows[i][1].ToString() + "\n" + "Name:" + dt.Rows[i][2].ToString());
-                                
+
                                 writer.WriteLine("Data:" + dt.Rows[i][3].ToString());
                                 writer.WriteLine(dt.Rows[i][4].ToString());
                                 writer.WriteLine(dt.Rows[i][5].ToString());
